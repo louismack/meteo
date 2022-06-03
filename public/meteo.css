@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body {
+  height: auto;
+  max-width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  flex-direction: column;
+  background-image: url("https://images.pexels.com/photos/125457/pexels-photo-125457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.container {
+  border: 1px solid #ccc;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  width: 93%;
+  font-family: inherit;
+  max-width: calc(450px + 25vw);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  margin: 10px auto 10px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #282828;
+  outline: 0;
+}
+main.container {
+  margin-top: 72px;
+}
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0 0 0.7rem 0;
+}
+h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0 0 0.9rem 0;
+}
+#temp {
+  font-size: 5rem;
+  margin: 0;
+  display: flex;
+}
+#temp sup {
+  font-size: 2.8rem;
+  margin-top: 10px;
+}
+
+#description {
+  margin: -0.7em 0 0 1em;
+  font-size: 1.4rem;
+}
+
+.icon {
+  width: 120px;
+  height: auto;
+  margin: 0;
+  align-self: center;
+  -webkit-filter: drop-shadow(1px 1px 0 black)
+    drop-shadow(-0.5px -0.5px 0 white);
+  filter: drop-shadow(1px 1px 0 black) drop-shadow(-0.5px -0.5px 0 white);
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.info-column-width {
+  width: 50%;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.additionnal-info > div {
+  border-bottom: #bcbcbc solid 1.4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.additionnal-info div p {
+  margin: 0.35rem 0;
+  font-size: 1rem;
+}
+#wind-arrow-icon {
+  margin: 0 5px 0 0;
+}
+.hourly > .flex-column,
+.daily > .flex-column {
+  border-right: #bcbcbc solid 1.4px;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+.temp {
+  margin-bottom: -1.4rem;
+  align-items: flex-start;
+}
+.hourly .temp p {
+  font-size: 2.5rem;
+}
+.hourly .temp sup {
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+.daily .temp p {
+  font-size: 1.9rem;
+}
+.daily .temp sup {
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+.precipitations {
+  margin-top: -1rem;
+}
+.precipitations p {
+  margin-left: 0.3rem;
+}
+.day {
+  font-size: 1.15rem;
+  text-transform: capitalize;
+}
+#hour4,
+#day4 {
+  border: none;
+}
+.forecastIcon {
+  max-width: 95%;
+}
+.daily-temp .flex-row {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 725px) {
+  .info-column-width {
+    width: 90%;
+  }
+  .main-flex-row {
+    flex-direction: column;
+  }
+  #temp {
+    justify-content: center;
+  }
+  .additionnal-info > div:last-child {
+    border: none;
+  }
+  #description {
+    margin: -0.7em auto 0 auto;
+  }
+  .daily .temp p {
+    font-size: 1.5rem;
+  }
+  .daily .temp sup {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  h1 {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hourly .temp p {
+    font-size: 2rem;
+  }
+  .hourly .temp sup {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+  .hourly .time {
+    font-size: 1.1rem;
+  }
+  .precipitations {
+    margin-top: -0.7rem;
+  }
+  .temp {
+    margin-bottom: -1rem;
+  }
+  .daily .temp p {
+    font-size: 1.4rem;
+  }
+  .daily .temp sup {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  .container {
+    padding: 7px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .daily .temp p {
+    font-size: 1.2rem;
+  }
+  .daily .temp sup {
+    font-size: 0.7rem;
+    margin-top: 0.25rem;
+  }
+  .day {
+    font-size: 1rem;
+  }
+  .precipitations p {
+    font-size: 1rem;
+    margin-left: 0.22rem;
+  }
+  #temp {
+    font-size: 3.9rem;
+    align-items: center;
+  }
+  .additionnal-info > div:last-child {
+    margin-bottom: 0.6rem;
+  }
+  #temp sup {
+    font-size: 2.3rem;
+    margin-top: -18px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .daily .temp p {
+    font-size: 1.1rem;
+  }
+  .daily .temp sup {
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+  }
+  .day {
+    font-size: 0.9rem;
+  }
+  h1,
+  h2 {
+    font-size: 1.1rem;
+  }
+  .hourly .temp p {
+    font-size: 1.5rem;
+  }
+  .hourly .temp sup {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  .hourly .time {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .daily-temp {
+    flex-direction: column;
+    align-items: center;
+  }
+  .daily-temp div {
+    width: 100%;
+  }
+  .daily-temp .flex-row:nth-of-type(2) p:nth-of-type(1) {
+    display: none;
+  }
+  .daily-temp .flex-row:nth-of-type(1) {
+    border-bottom: 1.5px solid #282828;
+  }
+}

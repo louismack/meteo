@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Météo — Recherche</title>
+    <link rel="stylesheet" href="/home.css" />
+    <link rel="stylesheet" href="/alert.css" />
+    <link rel="stylesheet" href="/navbar-footer.css" />
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <div class="top">
+      <h1>Météo</h1>
+      <p>
+        Commencez par chercher un endroit dans le monde et vous obtiendrez sa
+        météo
+      </p>
+    </div>
+    <section>
+      <input
+        type="text"
+        placeholder="Lancez une recherche"
+        autofocus
+        maxlength="25"
+      />
+      <div id="results"></div>
+    </section>
+    <%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="footer.js"></script>
+    <script src="alert.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>
