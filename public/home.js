@@ -62,20 +62,35 @@ input.addEventListener("focus", function () {
   }
 });
 input.addEventListener("blur", function () {
-  setTimeout(() => {
-    if (document.activeElement.parentNode !== results) {
-      results.classList.remove("show");
-      ajustFooter();
-    }
-  }, 200);
+  if (window.innerWidth > 500) {
+    setTimeout(() => {
+      if (document.activeElement.parentNode !== results) {
+        results.classList.remove("show");
+        ajustFooter();
+      }
+    }, 200);
+  }
 });
 
 input.addEventListener("keyup", function (event) {
   if ((event.key === "Enter" || event.keyCode === 13) && results.firstChild) {
-    if (screen.width > 500) {
+    if (window.innerWidth > 500) {
       results.firstChild.click();
     } else {
       input.blur();
+    }
+  }
+});
+
+addEventListener("click", function (event) {
+  if (event.target !== results && event.target !== input) {
+    if (window.innerWidth <= 500 && results.classList.contains("show")) {
+      setTimeout(() => {
+        if (document.activeElement.parentNode !== results) {
+          results.classList.remove("show");
+          ajustFooter();
+        }
+      }, 200);
     }
   }
 });
